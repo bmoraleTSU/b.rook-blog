@@ -1,6 +1,7 @@
 const plugin = require('tailwindcss/plugin');
 const pluginTypography = require('@tailwindcss/typography');
 const { COLOR_THEMES, FONT_THEMES } = require('../themes');
+const { urlObjectKeys } = require('next/dist/shared/lib/utils');
 
 const THEME = process.env.BLOG_THEME || 'default';
 const FONT_PRIMARY = process.env.BLOG_FONT_HEADINGS || 'sans-serif';
@@ -35,8 +36,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'author-image': "url('../public/b-header.jpg')",
       },
       colors: {
         primary: 'var(--color-primary)',
@@ -52,11 +52,11 @@ module.exports = {
       theme: {
         bejamas: {
           colors: {
-            primary: '#FF8585',
-            'gradient-1': '#7d7aff',
-            'gradient-2': '#2121E2',
-            'gradient-3': '#FF76B8',
-            'gradient-4': '#001AFF',
+            primary: '#F0EDE4',
+            'gradient-1': '#EEE2DA',
+            'gradient-2': '#DBD6CA',
+            'gradient-3': '#F0EDE4',
+            'gradient-4': '#E2DFD6',
           },
         },
       },
